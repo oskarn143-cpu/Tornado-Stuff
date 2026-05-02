@@ -1,0 +1,92 @@
+@font-face {
+  font-family: 'Bubble3D';
+  src: url('Fonts!/Bubble3D.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Bubble3D Italic';
+  src: url('Fonts!/Bubble3D-Italic.ttf') format('truetype');
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  gap: 5px;
+  cursor: url("Cursers/CursorHomePage.cur"), auto !important;
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(Wallpapers/mac_os_29.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.social-link {
+  color: #ffe66d;
+  font-size: 30px;
+  font-family: 'Bubble3D', sans-serif;
+  text-shadow: 0 0 5px #ffe66d;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  color: #ff4757;
+  text-shadow: 0 0 10px #ff4757;
+}
+
+h1 {
+  text-align: center;
+  color: #00d4ff;
+  font-size: 50px;
+  margin: 0;
+  font-family: 'Bubble3D', sans-serif;
+  text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 30px #00d4ff;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 30px #00d4ff; }
+  to { text-shadow: 0 0 20px #00d4ff, 0 0 30px #00d4ff, 0 0 40px #00d4ff; }
+}
+
+p {
+  text-align: center;
+  color: #ff6b6b;
+  font-size: 50px;
+  margin: 0;
+  font-family: 'Bubble3D Italic', sans-serif;
+  text-shadow: 0 0 5px #ff6b6b;
+}
+
+.bubbleFont {
+  text-align: center;
+  color: #4ecdc4;
+  font-size: 60px;
+  margin: 0;
+  font-family: 'Bubble3D Italic', sans-serif;
+  text-shadow: 0 0 5px #4ecdc4;
+}
+
+.borderbg {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 15px;
+    background: rgba(0, 212, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(0, 212, 255, 0.5);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+}
