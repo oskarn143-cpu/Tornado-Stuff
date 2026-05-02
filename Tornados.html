@@ -23,6 +23,14 @@
             <li><a href="Socials.html">Socials</a></li>
         </ul>
 </aside>
+    <aside class="page-section-nav">
+        <a href="#what">What is a Tornado?</a><br>
+        <a href="#how">How They Form</a><br>
+        <a href="#types">Types</a><br>
+        <a href="#safety">Safety Tips</a><br>
+        <a href="#famous">Famous Ones</a><br>
+        <a href="#myths">Myths & Facts</a>
+    </aside>
     <main>
         <h1>Tornados</h1>
         <p>All You Need To Know About Tornados!</p>
@@ -44,12 +52,12 @@
             </ul>
             <div class="slider"><div class="indicator"></div></div>
             <div class="content">
-                <section>
+                <section id="what">
                     <h2>What is a Tornado?</h2>
                     <a href="Hackleburg.html"><img src="Tornados/Screenshot 2026-05-02 132023.png" alt="Hackleburg EF5 Tornado" style="width: 100%; max-width: 600px; border-radius: 10px; margin-bottom: 15px; cursor: pointer;"></a>
                     <p>A tornado is a violently rotating column of air that extends from a thunderstorm to the ground. It is one of nature's most powerful and destructive weather phenomena. Tornados can cause extensive damage, with winds reaching speeds of up to 300 mph (480 km/h).</p>
                 </section>
-                <section>
+                <section id="how">
                     <h2>How Tornados Form</h2>
                     <a href="Enderlin.html"><img src="Tornados/Screenshot 2026-05-02 132045.png" alt="Enderlin EF5 Tornado 2025" style="width: 100%; max-width: 600px; border-radius: 10px; margin-bottom: 15px; cursor: pointer;"></a>
                     <p>Tornados form when warm, moist air meets cool, dry air in an unstable atmosphere. This creates thunderstorms with strong updrafts. When wind shear causes the updraft to rotate, a mesocyclone forms. If conditions are right, a funnel cloud descends from the storm, touching the ground and becoming a tornado.</p>
@@ -58,7 +66,7 @@
                         <li><strong>Peak Season:</strong> Spring and early summer in the U.S., but they can occur year-round.</li>
                     </ul>
                 </section>
-                <section>
+                <section id="types">
                     <h2>Types of Tornados</h2>
                     <a href="Xenia.html"><img src="Tornados/Screenshot 2026-05-02 132058.png" alt="Xenia F5 Tornado" style="width: 100%; max-width: 600px; border-radius: 10px; margin-bottom: 15px; cursor: pointer;"></a>
                     <p>Tornados are classified by their intensity using the Enhanced Fujita Scale (EF Scale), ranging from EF0 (weak) to EF5 (violent).</p>
@@ -69,7 +77,7 @@
                     </ul>
                     <p>Other types include waterspouts (over water), landspouts, and gustnadoes.</p>
                 </section>
-                <section>
+                <section id="safety">
                     <h2>Tornado Safety Tips</h2>
                     <a href="Joplin.html"><img src="Tornados/Screenshot 2026-05-02 132335.png" alt="Joplin EF5 Tornado" style="width: 100%; max-width: 600px; border-radius: 10px; margin-bottom: 15px; cursor: pointer;"></a>
                     <p>If a tornado warning is issued, take shelter immediately. Go to a basement or interior room on the lowest floor. Avoid windows and cover yourself with blankets or helmets.</p>
@@ -80,12 +88,12 @@
                         <li>Do not try to outrun a tornado in a vehicle.</li>
                     </ul>
                 </section>
-                <section>
+                <section id="famous">
                     <h2>Famous Tornados</h2>
                     <a href="Jarrell.html"><img src="Tornados/Screenshot 2026-05-02 132404.png" alt="Jarrell Texas F5 Tornado" style="width: 100%; max-width: 600px; border-radius: 10px; margin-bottom: 15px; cursor: pointer;"></a>
                     <p>Some notable tornados include the Tri-State Tornado of 1925 (deadliest in U.S. history, 695 deaths) and the Joplin Tornado of 2011 (EF5, 158 deaths).</p>
                 </section>
-                <section>
+                <section id="myths">
                     <h2>Myths and Facts</h2>
                     <a href="Moore.html"><img src="Tornados/Screenshot 2026-05-02 132447.png" alt="Moore 2013 EF5 Tornado" style="width: 100%; max-width: 600px; border-radius: 10px; margin-bottom: 15px; cursor: pointer;"></a>
                     <ul>
@@ -97,6 +105,26 @@
             </div>
         </div>
     </main>
-    
+    <script>
+        const tabMap = {
+            tab1: 'what',
+            tab2: 'how',
+            tab3: 'types',
+            tab4: 'safety',
+            tab5: 'famous',
+            tab6: 'myths'
+        };
+        document.querySelectorAll('.tabs ul li label').forEach(label => {
+            label.addEventListener('click', () => {
+                const input = document.getElementById(label.getAttribute('for'));
+                if (input && tabMap[input.id]) {
+                    window.location.hash = tabMap[input.id];
+                    setTimeout(() => {
+                        input.checked = true;
+                    }, 0);
+                }
+            });
+        });
+    </script>
 </body>
 </html>

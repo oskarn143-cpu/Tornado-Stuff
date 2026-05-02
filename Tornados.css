@@ -7,6 +7,22 @@
   font-family: 'Bubble3D Italic';
   src: url('Fonts!/Bubble3D-Italic.ttf') format('truetype');
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+.page-section-nav {
+  position: fixed;
+  top: 10px;
+  left: 250px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
 body {
   display: flex;
   flex-direction: column;
